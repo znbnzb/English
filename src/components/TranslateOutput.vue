@@ -1,6 +1,6 @@
 <template>
     <div>
-
+      <p>新建了一个元素</p>
     </div>
 </template>
 
