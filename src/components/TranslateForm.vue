@@ -8,7 +8,7 @@
     export default {
         name:'translateForm'
         components:{
-            
+            http:
         }
     }
 </script>
