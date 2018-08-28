@@ -1,15 +1,17 @@
 <template>
-    <div id="translateForm">
-         <form v-on:submit="formSubmit">
-             <input type="text" v-model="textToTranslate" placeholder="输入需要翻译的内容" >
-             <select v-model="language">  <!--language获取选中的值-->
-                 <option value="en">English</option>
-                 <option value="ru">Russian</option>
-                 <option value="ko">Korean</option>
-                 <option value="ja">Janpenese</option>
-             </select>
-             <input type="submit" value="翻译">
-         </form>
+    <div class="row" id="translateForm">
+        <div class="col-md-6 col-md-offset-3">
+            <form id="transForm" class="well form-inline" v-on:submit="formSubmit">
+                <input class="form-control" type="text" v-model="textToTranslate" placeholder="输入需要翻译的内容" >
+                <select class="form-control" v-model="language">  <!--language获取选中的值-->
+                    <option value="en">英语</option>
+                    <option value="ru">俄语</option>
+                    <option value="ko">韩语</option>
+                    <option value="ja">日语</option>
+                </select>
+                <input class="btn btn-primary" type="submit" value="翻译">
+            </form>
+        </div>
     </div>
 </template>
 
@@ -31,12 +33,15 @@
                  
             }
         },
-        components:{
-            
+        created:function(){
+           this.language='en';
         }
     }
 </script>
 
 <style scoped>
-
+#transForm{
+    border:1px #ccc solid;
+    border-radius: 10px;
+}
 </style>

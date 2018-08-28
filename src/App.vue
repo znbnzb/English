@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>在线翻译</h1>
-    <h5>简单 / 易用 / 便捷</h5>
+    <h5 class="text-muted">简单 / 易用 / 便捷</h5>
     <!-- 调用方法 -->
     <translateForm v-on:getform="getText"></translateForm>  
     <!-- 用v-text进行传值 -->
@@ -39,6 +39,7 @@ export default {
 
 <style>
 #app {
-  
+  text-align: center;
+    margin-top: 0px;
 }
 </style>
